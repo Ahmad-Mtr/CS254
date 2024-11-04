@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "README.md",
+                "file": "assignment1/README.md",
                 "mode": "source",
                 "source": false
               },
@@ -93,7 +93,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "README.md",
+                "file": "assignment1/README.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -149,8 +149,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -164,10 +163,10 @@
   },
   "active": "877348eb36fbcae3",
   "lastOpenFiles": [
+    "README.md",
     "assignment1/README.md",
     "assets/panels-structure.png",
     "assets/mvc.png",
-    "README.md",
     "assets/what-is-mvc.png",
     "assets",
     "Untitled.md",
