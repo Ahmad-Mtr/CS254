@@ -1,11 +1,7 @@
-Here's a concise cheatsheet for Java Visual Programming (Swing & AWT) with snippets for each topic to help with quick revision.
+##  Java Swing & AWT Cheatsheet
 
----
-
-### Java Swing & AWT Cheatsheet
-
----
-
+> [!NOTE]
+> This Cheat sheet won't have everything explained, use it if you want, but know that I've made it only as a cheat sheet for me to study the Material without looking at the slides, and most of the content here may be llm-generated.
 #### Basic Component Configuration
 
 - **`validate()`**: Re-validates component layout after dynamic changes.
@@ -271,6 +267,5 @@ Based on the image, here are some additional components and Action/Event listene
 
   Each button triggers specific actions when clicked.
 
----
 
-These additions should cover all components and listeners observed in the provided image.
+---

@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "assignment1/README.md",
+                "file": "README.md",
                 "mode": "source",
                 "source": false
               },
@@ -162,10 +162,10 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "fdb6164078a8029c",
+  "active": "877348eb36fbcae3",
   "lastOpenFiles": [
-    "assets/panels-structure.png",
     "assignment1/README.md",
+    "assets/panels-structure.png",
     "assets/mvc.png",
     "README.md",
     "assets/what-is-mvc.png",
