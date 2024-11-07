@@ -31,11 +31,11 @@ public class OrderController {
             String crust = getSelectedCrust();
             ArrayList<String> toppings = getSelectedToppings();
 
-            // Create a new Pizza object and add it to the order list
+
             Pizza pizza = new Pizza(size, crust, toppings);
             order.addPizza(pizza);
 
-            // Update order details area
+
             view.orderDetailsArea.append("Pizza #" + order.getPizzas().size() + ": " + pizza.toString() + "\n");
         }
 
@@ -45,7 +45,7 @@ public class OrderController {
                     return ((JRadioButton) comp).getText();
                 }
             }
-            return "Medium"; // default if none selected
+            return "Medium";
         }
 
         private String getSelectedCrust() {
@@ -54,7 +54,7 @@ public class OrderController {
                     return ((JRadioButton) comp).getText();
                 }
             }
-            return "Regular"; // default if none selected
+            return "Regular";
         }
 
         private ArrayList<String> getSelectedToppings() {
@@ -72,16 +72,22 @@ public class OrderController {
 
         @Override
         public void actionPerformed(ActionEvent e) {
-            ArrayList<Pizza> pizzas = order.getPizzas();
-            String pizzaString = "";
-            for (Pizza pizza :
-                    pizzas) {
-                pizzaString += pizza.toString() + "\n";
-            }
-            view.orderDetailsArea.append("Order by: " + view.customerNameField.getText() + "\n"
-                    + "Total Price: " + order.calculateTotalCost() + "\n" + pizzaString);
 
-            view.totalAmountField.setText(""+order.getCost());
+                ArrayList<Pizza> pizzas = order.getPizzas();
+                if (pizzas.isEmpty()){
+                    view.orderDetailsArea.append("No Pizza has been added\n");
+                    return;
+                }
+                String pizzaString = "";
+                for (Pizza pizza :
+                        pizzas) {
+                    pizzaString += pizza.toString() + "\n";
+                }
+                view.orderDetailsArea.append("Order by: " + view.customerNameField.getText() + "\n"
+                        + "Total Price: " + order.calculateTotalCost() + "\n" + pizzaString);
+
+                view.totalAmountField.setText(""+order.getCost());
+
         }
     }
 
@@ -94,12 +100,9 @@ public class OrderController {
             view.totalAmountField.setText("");
             view.customerNameField.setText("");
 
-            // Reset size selection to Medium
-            ((JRadioButton) view.sizePanel.getComponents()[1]).setSelected(true);
 
-            // Reset crust selection to Stuffed
+            ((JRadioButton) view.sizePanel.getComponents()[1]).setSelected(true);
             ((JRadioButton) view.crustPanel.getComponents()[1]).setSelected(true);
-            // Uncheck all toppings
             for (JCheckBox checkbox : view.toppingCheckboxes) {
                 checkbox.setSelected(false);
             }

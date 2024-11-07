@@ -1,10 +1,16 @@
 package view;
 
+import utils.BoxIcon;
+import utils.CircleIcon;
+import utils.ctp;
+
 import javax.swing.*;
+import javax.swing.border.LineBorder;
+import javax.swing.border.TitledBorder;
 import java.awt.*;
-import java.util.ArrayList;
 
 public class OrderView extends JFrame {
+    private final ctp clrs;
     public JTextField customerNameField;
     public JTextField totalAmountField;
     public JTextArea orderDetailsArea;
@@ -18,89 +24,145 @@ public class OrderView extends JFrame {
     public JButton restartOrderButton;
 
     public OrderView() {
+        clrs = new ctp();
+        applyCtpTheme(clrs);
+
+        getContentPane().setBackground(clrs.getBase());
+        getContentPane().setForeground(clrs.getText());
         setTitle("Pizza Order");
         setSize(800, 450);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
-        // Layout setup
+
         setLayout(new BorderLayout());
 
-        // Customer name and total amount panel --> Panel 1
+
         JPanel customerPanel = new JPanel(new FlowLayout());
         customerNameField = new JTextField(10);
         totalAmountField = new JTextField(10);
         totalAmountField.setEditable(false);
+        customerPanel.setForeground(clrs.getText());
+
 
         customerPanel.add(new JLabel("Customer Name:"));
         customerPanel.add(customerNameField);
         customerPanel.add(new JLabel("Total:"));
         customerPanel.add(totalAmountField);
+//        customerPanel.setBackground(clrs.getBase());
 
-        // Pizza selection panel ---> panel2
+
+
+        // Container of all Contained
         JPanel pizzaPanel = new JPanel(new GridLayout(2, 1));
 
         // Size selection
         sizePanel = new JPanel(new GridLayout(3 ,1 ));
-        sizePanel.setBorder(BorderFactory.createTitledBorder("Size"));
-        // Create radio buttons
+        TitledBorder titledBorder = BorderFactory.createTitledBorder(BorderFactory.createLineBorder(clrs.getSurface0()), "Size");
+        titledBorder.setTitleColor(clrs.getText());  // Set the title text color
+        pizzaPanel.setBorder(titledBorder);
+
+        // To color a radio button
+        Icon unselectedIcon = new CircleIcon(new Color(0x585b70), new Color(0x313244));
+        Icon selectedIcon = new CircleIcon(new Color(0x313244), new Color(0x89dceb));
+
+
         JRadioButton smallButton = new JRadioButton("Small");
+        smallButton.setIcon(unselectedIcon);
+        smallButton.setSelectedIcon(selectedIcon);
         JRadioButton mediumButton = new JRadioButton("Medium", true); // Default selected
+        mediumButton.setIcon(unselectedIcon);
+        mediumButton.setSelectedIcon(selectedIcon);
         JRadioButton largeButton = new JRadioButton("Large");
-        // Add radio buttons to a ButtonGroup to make them mutually exclusive
+        largeButton.setIcon(unselectedIcon);
+        largeButton.setSelectedIcon(selectedIcon);
+
+        // Let Radios function
         ButtonGroup sizeGroup = new ButtonGroup();
         sizeGroup.add(smallButton);
         sizeGroup.add(mediumButton);
         sizeGroup.add(largeButton);
-        // Add radio buttons to the panel
+
         sizePanel.add(smallButton);
         sizePanel.add(mediumButton);
         sizePanel.add(largeButton);
 
 
-
+//       sizePanel.setBackground(clrs.getBase());
+//       sizePanel.setForeground(clrs.getText());
 
         // Crust selection
         crustPanel = new JPanel(new GridLayout(3 ,1 ));
         crustBox = new JComboBox<>(new String[]{"Pan", "Stuffed", "Regular"});
-        crustPanel.setBorder(BorderFactory.createTitledBorder("Crust"));
+        TitledBorder titledCrustBorder = BorderFactory.createTitledBorder(BorderFactory.createLineBorder(clrs.getSurface0()), "Crust");
+        titledCrustBorder.setTitleColor(clrs.getText());  // Set the title text color
+        crustPanel.setBorder(titledCrustBorder);
+
         // Create radio buttons
         JRadioButton panButton = new JRadioButton("Pan");
+        panButton.setIcon(unselectedIcon);
+        panButton.setSelectedIcon(selectedIcon);
         JRadioButton stuffedButton = new JRadioButton("Stuffed", true); // Default selected
+        stuffedButton.setIcon(unselectedIcon);
+        stuffedButton.setSelectedIcon(selectedIcon);
         JRadioButton regularButton = new JRadioButton("Regular");
-        // Add radio buttons to a ButtonGroup to make them mutually exclusive
+        regularButton.setIcon(unselectedIcon);
+        regularButton.setSelectedIcon(selectedIcon);
+
         ButtonGroup crustGroup = new ButtonGroup();
+
         crustGroup.add(panButton);
         crustGroup.add(stuffedButton);
         crustGroup.add(regularButton);
-        // Add radio buttons to the panel
+
         crustPanel.add(panButton);
         crustPanel.add(stuffedButton);
         crustPanel.add(regularButton);
 
+//        crustPanel.setBackground(clrs.getMantle());
+//        crustPanel.setForeground(clrs.getText());
+
+
+//        crustBox.setBackground(clrs.getSky());
+//        crustBox.setForeground(clrs.getText());
+
         // Toppings selection
         JPanel toppingPanel = new JPanel(new GridLayout(2, 3));
-        toppingPanel.setBorder(BorderFactory.createTitledBorder("Toppings"));
+//        toppingPanel.setBorder(BorderFactory.createTitledBorder("Toppings"));
+
+        // Set up the TitledBorder with custom colors
+        TitledBorder titledToppingsBorder = BorderFactory.createTitledBorder(BorderFactory.createLineBorder(clrs.getSurface0()), "Toppings");
+        titledToppingsBorder.setTitleColor(clrs.getText());  // Set the title text color
+        toppingPanel.setBorder(titledToppingsBorder);
+
         String[] toppings = {"Extra Cheese", "Tomatoes", "Olives", "Green Peppers", "Onions"};
         toppingCheckboxes = new JCheckBox[toppings.length];
+
+        // Create custom icons for selected and unselected states
+        Icon unselectedBoxIcon = new BoxIcon(new Color(0x585b70), new Color(0x313244));
+        Icon selectedBoxIcon = new BoxIcon(new Color(0x313244), new Color(0x89dceb));
         for (int i = 0; i < toppings.length; i++) {
             toppingCheckboxes[i] = new JCheckBox(toppings[i]);
+            toppingCheckboxes[i].setIcon(unselectedBoxIcon);
+            toppingCheckboxes[i].setSelectedIcon(selectedBoxIcon);
             toppingPanel.add(toppingCheckboxes[i]);
         }
 
+        toppingPanel.setBackground(clrs.getMantle());
 
-        JPanel buttonsAreaPanel = new JPanel(); // Panel 4
+
+        JPanel buttonsAreaPanel = new JPanel();
         buttonsAreaPanel.setLayout(new BoxLayout(buttonsAreaPanel, BoxLayout.Y_AXIS));
 
-        // Buttons panel
+        // Buttons Row
         JPanel buttonPanel = new JPanel(new FlowLayout());
-        addPizzaButton = new JButton("Add Pizza");
-        calculateTotalButton = new JButton("Calculate Order Total");
-        restartOrderButton = new JButton("Restart Order");
+            addPizzaButton = new JButton("Add Pizza");
+            calculateTotalButton = new JButton("Calculate Order Total");
+            restartOrderButton = new JButton("Restart Order");
         buttonPanel.add(addPizzaButton);
         buttonPanel.add(calculateTotalButton);
         buttonPanel.add(restartOrderButton);
 
-        // Order details area
+
         orderDetailsArea = new JTextArea(10, 40);
         orderDetailsArea.setEditable(false);
         JScrollPane scrollPane = new JScrollPane(orderDetailsArea);
@@ -113,12 +175,42 @@ public class OrderView extends JFrame {
         pizzaPanel.add(crustPanel);
         pizzaPanel.add(buttonsAreaPanel);
 
-        // Adding components to frame
+
         add(customerPanel, BorderLayout.NORTH);
         add(pizzaPanel, BorderLayout.CENTER);
-//        add(buttonPanel, BorderLayout.SOUTH);
         add(scrollPane, BorderLayout.EAST);
 
 
     }
+    public void applyCtpTheme(ctp theme) {
+        // Text
+        UIManager.put("Label.foreground", theme.getText());
+        UIManager.put("Button.foreground", theme.getText());
+        UIManager.put("TextField.foreground", theme.getText());
+        UIManager.put("TextArea.foreground", theme.getText());
+        UIManager.put("CheckBox.foreground", theme.getSubtext());
+        UIManager.put("RadioButton.foreground", theme.getSubtext());
+
+        // bckgrnd
+        UIManager.put("Panel.background", theme.getBase());
+        UIManager.put("Button.background", theme.getCrust()  );
+        UIManager.put("TextField.background", theme.getCrust());
+        UIManager.put("TextArea.background", theme.getCrust());
+        UIManager.put("CheckBox.background", theme.getMantle());
+        UIManager.put("RadioButton.background", theme.getMantle());
+
+        // Others
+        UIManager.put("Button.border", BorderFactory.createLineBorder(theme.getSky()));
+        UIManager.put("TextField.border", BorderFactory.createLineBorder(theme.getSurface0()));
+        UIManager.put("TextArea.border", BorderFactory.createLineBorder(theme.getSurface0()));
+        UIManager.put("RadioButton.focus", theme.getSurface());
+        UIManager.put("CheckBox.focus", theme.getSurface());
+
+        UIManager.put("Button.margin", new Insets(10, 20, 10, 20));
+        UIManager.put("Button.border", new LineBorder(clrs.getSky(), 2));
+        UIManager.put("Button.preferredSize", new Dimension(200, 50));
+
+
+    }
+
 }

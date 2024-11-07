@@ -3,7 +3,6 @@ package model;
 import java.util.ArrayList;
 
 public class Order {
-    private String customerName;
     private double cost;
 
     public double getCost() {
@@ -17,7 +16,7 @@ public class Order {
     }
 
     public Order() {
-        this.pizzas = new ArrayList<Pizza>();
+        this.pizzas = new ArrayList<>();
         cost = 0;
     }
 
