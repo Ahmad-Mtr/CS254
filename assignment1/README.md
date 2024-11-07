@@ -1,6 +1,7 @@
 > [!NOTE]
-> There's a  version with different UI look, use the one on `main` branch only
+> This's a  version with different UI look, use the one on `main` branch only
 
+![Custom Sol.](https://acdn.jsdelivr.net/gh/Ahmad-Mtr/CS254@main/assets/ass1-custom-sol.jpg)
 
 Panels Layout:
 ![Panels Layout](https://cdn.jsdelivr.net/gh/Ahmad-Mtr/CS254@main/assets/panels-structure.png)
