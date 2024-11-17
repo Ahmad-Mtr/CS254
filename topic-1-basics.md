@@ -1,13 +1,13 @@
 # Java Swing Cheatsheet
 
 ## Basics
-- **AWT**: Heavy-weight, platform-dependent GUI framework (JDK 1.0 - 1.1).
-- **Swing**: Lightweight, platform-independent GUI framework (JDK 1.2+).
+- **AWT**: Heavy-weight, platform-dependent GUI framework.
+- **Swing**: Lightweight, platform-independent GUI framework.
 
 ## Key Terminology
-- **Window**: Top-level container (e.g., JFrame, JDialog).
-- **Component**: GUI widget (e.g., JButton, JLabel, JTextField).
-- **Container**: Groups components logically (e.g., JPanel).
+- **Window**: Top-level container (e.g., `JFrame`, `JDialog`).
+- **Component**: GUI widget (e.g., `JButton`, `JLabel`, `JTextField`).
+- **Container**: Groups components logically (e.g., `JPanel`).
 
 ---
 
