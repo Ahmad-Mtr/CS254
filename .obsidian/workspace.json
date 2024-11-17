@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "assignment1/README.md",
+                "file": "README.md",
                 "mode": "source",
                 "source": false
               },
@@ -93,8 +93,8 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "assignment1/README.md",
-                "collapseAll": false,
+                "file": "README.md",
+                "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
                 "showSearch": false,
@@ -145,7 +145,8 @@
               "title": "Outline of README"
             }
           }
-        ]
+        ],
+        "currentTab": 3
       }
     ],
     "direction": "horizontal",
@@ -163,13 +164,24 @@
   },
   "active": "877348eb36fbcae3",
   "lastOpenFiles": [
+    "topic-2-mvc-2.md",
+    "topic-2-mvc-1.md",
+    "topic-1-basics.md",
+    "material/Lecture 8 - Other Events and components.pdf",
+    "material/Lecture 7 - Other Events.pdf",
+    "material/Lecture 5 - Graphics.pdf",
+    "material/Lecture 4 - MVC.pdf",
+    "material/Lecture 3 - MVC.pdf",
     "README.md",
+    "material/Lecture 2 - Label-Button-TextField.pdf",
+    "material/Lecture 1 - Frames and Layout.pdf",
+    "material/Lecture 6 - Mouse Events.pdf",
+    "material",
     "assignment1/README.md",
     "assets/panels-structure.png",
     "assets/mvc.png",
     "assets/what-is-mvc.png",
     "assets",
-    "Untitled.md",
     "Welcome.md"
   ]
 }
