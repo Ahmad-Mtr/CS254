@@ -46,8 +46,11 @@
     int getY();               // Y-coordinate of the event
     Point getPoint();         // Point of the event
     int getClickCount();      // Number of clicks
+    Object getSource();       // Get the event source.
+    int getModifiers();       // Get modifier keys (use masks).
     boolean isLeftMouseButton(MouseEvent e);
     boolean isRightMouseButton(MouseEvent e);
+    boolean isMiddleMouseButton(MouseEvent e);
     ```
 
 ---
@@ -137,6 +140,32 @@ public class MouseAdapterExample extends JPanel {
     }
 }
 ```
+
+---
+## Mouse Wheel Scrolling
+
+**MouseWheelListener Interface**:
+- Interface to handle mouse wheel events.
+
+**Method:**
+- `void mouseWheelMoved(MouseWheelEvent event)`: Invoked when the mouse wheel is moved.
+
+**Usage Example:**
+```java
+component.addMouseWheelListener(new MouseWheelListener() {
+    @Override
+    public void mouseWheelMoved(MouseWheelEvent event) {
+        // Handle mouse wheel movement
+    }
+});
+```
+
+**Method to Add Listener:**
+- `public void addMouseWheelListener(MouseWheelListener ml)`: Adds a mouse wheel listener to a component.
+```java
+component.addMouseWheelListener(listener);
+```
+
 
 ---
 

@@ -27,6 +27,7 @@
   ```java
   public void keyPressed(KeyEvent e);
   public void keyReleased(KeyEvent e);
+  public Object getSource();
   public void keyTyped(KeyEvent e);
   ```
   - Add a listener:
@@ -167,6 +168,78 @@ public class KeyAdapterExample extends JFrame {
     }
 }
 ```
+
+---
+Here’s a concise Java Swing cheatsheet in markdown format for `MouseAdapter`, `KeyAdapter`, and `FocusAdapter`:
+
+```markdown
+## Java Swing Adapter Cheat Sheet
+
+### MouseAdapter
+- Used for handling mouse events by overriding methods like `mousePressed()`, `mouseReleased()`, etc.
+
+**Methods:**
+- `void mouseClicked(MouseEvent e)`: Invoked when the mouse button is clicked.
+- `void mousePressed(MouseEvent e)`: Invoked when a mouse button is pressed.
+- `void mouseReleased(MouseEvent e)`: Invoked when a mouse button is released.
+- `void mouseEntered(MouseEvent e)`: Invoked when the mouse enters the component.
+- `void mouseExited(MouseEvent e)`: Invoked when the mouse exits the component.
+
+**Usage Example:**
+```java
+component.addMouseListener(new MouseAdapter() {
+    @Override
+    public void mouseClicked(MouseEvent e) {
+        // Handle mouse click
+    }
+});
+```
+
+---
+
+### KeyAdapter
+- Used for handling key events by overriding methods like `keyPressed()`, `keyReleased()`, etc.
+
+**Methods:**
+- `void keyPressed(KeyEvent e)`: Invoked when a key is pressed.
+- `void keyReleased(KeyEvent e)`: Invoked when a key is released.
+- `void keyTyped(KeyEvent e)`: Invoked when a key is typed (a key is pressed and released).
+
+**Usage Example:**
+```java
+component.addKeyListener(new KeyAdapter() {
+    @Override
+    public void keyPressed(KeyEvent e) {
+        // Handle key press
+    }
+});
+```
+
+---
+
+## FocusAdapter
+- Used for handling focus events by overriding `focusGained()` and `focusLost()` methods.
+
+**Methods:**
+- `void focusGained(FocusEvent e)`: Invoked when the component gains focus.
+- `void focusLost(FocusEvent e)`: Invoked when the component loses focus.
+
+**Usage Example:**
+```java
+component.addFocusListener(new FocusAdapter() {
+    @Override
+    public void focusGained(FocusEvent e) {
+        // Handle focus gained
+    }
+
+    @Override
+    public void focusLost(FocusEvent e) {
+        // Handle focus lost
+    }
+});
+```
+
+
 
 ---
 
