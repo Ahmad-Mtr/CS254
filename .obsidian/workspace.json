@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "topic-5-other-events.md",
+                "file": "vis.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "topic-5-other-events"
+              "title": "vis"
             }
           },
           {
@@ -47,8 +47,7 @@
               "title": "todo"
             }
           }
-        ],
-        "currentTab": 2
+        ]
       }
     ],
     "direction": "vertical"
@@ -166,10 +165,10 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "todo.md"
+                "file": "vis.md"
               },
               "icon": "lucide-list",
-              "title": "Outline of todo"
+              "title": "Outline of vis"
             }
           }
         ],
@@ -189,11 +188,14 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "12ae9e6006d3dca5",
+  "active": "e7cae9f81f59892a",
   "lastOpenFiles": [
+    "Untitled.md",
+    "vis.md",
     "topic-5-other-events.md",
-    "material/Lecture 7 - Other Events.pdf",
     "todo.md",
+    "VisualMid.txt",
+    "material/Lecture 7 - Other Events.pdf",
     "material/Lecture 6 - Mouse Events.pdf",
     "topic-4-mouse-events.md",
     "topic-1-basics.md",
@@ -204,12 +206,10 @@
     "material/Lecture 4 - MVC.pdf",
     "material/Lecture 3 - MVC.pdf",
     "material/Lecture 2 - Label-Button-TextField.pdf",
-    "Untitled.md",
     "material/Lecture 1 - Frames and Layout.pdf",
     "README.md",
     "material/Lecture 8 - Other Events and components.pdf",
     "material",
-    "CS254.rar",
     "assets/ass1-custom-sol.jpg",
     "assignment1/README.md",
     "assets/panels-structure.png",

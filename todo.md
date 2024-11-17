@@ -1,7 +1,7 @@
 - [x] **Layouts** more syntax
 - [x] `JButtons` & `JTextField` examples
 - [x] `JOptionPane` syntax
-- [x] Include diagrams for *MVC*
+- [ ] Include diagrams for *MVC*
 - [x] `initController()`
 - [x] Colors & `setOpaque()`
 - [x] Note: `toString()`
