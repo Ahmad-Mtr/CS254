@@ -143,8 +143,25 @@ public class KeyExample extends JFrame implements KeyListener {
 ```
 
 ---
+## KeyAdapter
+- Used for handling key events by overriding methods like `keyPressed()`, `keyReleased()`, etc.
 
-## KeyAdapter Example
+**Methods:**
+- `void keyPressed(KeyEvent e)`: Invoked when a key is pressed.
+- `void keyReleased(KeyEvent e)`: Invoked when a key is released.
+- `void keyTyped(KeyEvent e)`: Invoked when a key is typed (a key is pressed and released).
+
+**Usage Example:**
+```java
+component.addKeyListener(new KeyAdapter() {
+    @Override
+    public void keyPressed(KeyEvent e) {
+        // Handle key press
+    }
+});
+```
+
+### KeyAdapter Example
 - Use `KeyAdapter` to simplify the implementation by overriding only necessary methods:
 ```java
 import javax.swing.*;
@@ -167,52 +184,6 @@ public class KeyAdapterExample extends JFrame {
         new KeyAdapterExample();
     }
 }
-```
-
----
-Here’s a concise Java Swing cheatsheet in markdown format for `MouseAdapter`, `KeyAdapter`, and `FocusAdapter`:
-
-```markdown
-## Java Swing Adapter Cheat Sheet
-
-### MouseAdapter
-- Used for handling mouse events by overriding methods like `mousePressed()`, `mouseReleased()`, etc.
-
-**Methods:**
-- `void mouseClicked(MouseEvent e)`: Invoked when the mouse button is clicked.
-- `void mousePressed(MouseEvent e)`: Invoked when a mouse button is pressed.
-- `void mouseReleased(MouseEvent e)`: Invoked when a mouse button is released.
-- `void mouseEntered(MouseEvent e)`: Invoked when the mouse enters the component.
-- `void mouseExited(MouseEvent e)`: Invoked when the mouse exits the component.
-
-**Usage Example:**
-```java
-component.addMouseListener(new MouseAdapter() {
-    @Override
-    public void mouseClicked(MouseEvent e) {
-        // Handle mouse click
-    }
-});
-```
-
----
-
-### KeyAdapter
-- Used for handling key events by overriding methods like `keyPressed()`, `keyReleased()`, etc.
-
-**Methods:**
-- `void keyPressed(KeyEvent e)`: Invoked when a key is pressed.
-- `void keyReleased(KeyEvent e)`: Invoked when a key is released.
-- `void keyTyped(KeyEvent e)`: Invoked when a key is typed (a key is pressed and released).
-
-**Usage Example:**
-```java
-component.addKeyListener(new KeyAdapter() {
-    @Override
-    public void keyPressed(KeyEvent e) {
-        // Handle key press
-    }
-});
 ```
 
 ---
