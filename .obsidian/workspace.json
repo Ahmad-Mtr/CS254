@@ -14,6 +14,7 @@
               "type": "markdown",
               "state": {
                 "file": "topic-5-other-events.md",
+
                 "mode": "source",
                 "source": false
               },
@@ -120,13 +121,13 @@
               "type": "backlink",
               "state": {
                 "file": "README.md",
-                "collapseAll": true,
-                "extraContext": false,
+                "collapseAll": false,
+                "extraContext": true,
                 "sortOrder": "alphabetical",
-                "showSearch": false,
+                "showSearch": true,
                 "searchQuery": "",
                 "backlinkCollapsed": false,
-                "unlinkedCollapsed": true
+                "unlinkedCollapsed": false
               },
               "icon": "links-coming-in",
               "title": "Backlinks for README"
@@ -138,12 +139,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "todo.md",
+                "file": "README.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "Outgoing links from todo"
+              "title": "Outgoing links from README"
             }
           },
           {
@@ -190,6 +191,7 @@
   },
   "active": "e7cae9f81f59892a",
   "lastOpenFiles": [
+
     "topic-4-mouse-events.md",
     "todo.md",
     "material/Lecture 5 - Graphics.pdf",
@@ -197,9 +199,7 @@
     "topic-3-graphics.md",
     "assets/what-is-mvc.png",
     "assets/mvc.png",
-    "topic-2-mvc-1.md",
     "assignment1/README.md",
-    "topic-2-mvc-2.md",
     "material/Lecture 7 - Other Events.pdf",
     "vis.md",
     "Untitled.md",
@@ -210,7 +210,6 @@
     "material/Lecture 3 - MVC.pdf",
     "material/Lecture 2 - Label-Button-TextField.pdf",
     "material/Lecture 1 - Frames and Layout.pdf",
-    "README.md",
     "material/Lecture 8 - Other Events and components.pdf",
     "material",
     "assets/ass1-custom-sol.jpg",
