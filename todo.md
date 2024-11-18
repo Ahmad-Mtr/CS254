@@ -1,18 +1,19 @@
 - [x] **Layouts** more syntax
 - [x] `JButtons` & `JTextField` examples
 - [x] `JOptionPane` syntax
-- [ ] Include diagrams for *MVC*
+- [x] Include diagrams for *MVC*
 - [x] `initController()`
 - [x] Colors & `setOpaque()`
 - [x] Note: `toString()`
 - [x] utils and Selection (how to select foreach component in a View)
-- [ ] 4later: X_AI
-- [ ] Graphics: finding screen parameters *sl. 8*
-- [ ] Graphics2D getter & setters methods *sl. 12*
-- [ ] *sl. 13 + 14* methods
-- [ ] Colors & Strokes
-- [ ] *sl. 15 - EoF*
+- [x] 4later: X_AI
+- [x] Graphics: finding screen parameters *sl. 8*
+- [x] Graphics2D getter & setters methods *sl. 12*
+- [x] *sl. 13 + 14* methods
+- [x] Colors & Strokes
+- [x] *sl. 15 - EoF*
 - [ ] Test Dynamic Graphics
 - [x] lect 6 pg. 7, 9, mouse motion
 - [x] `getSource()` for *KeyEvent* Methods
+
 

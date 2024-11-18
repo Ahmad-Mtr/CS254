@@ -1,6 +1,10 @@
 # Java Swing MVC Cheatsheet
 
 ## MVC Architecture
+![MVC Diagram](https://cdn.jsdelivr.net/gh/Ahmad-Mtr/CS254@main/assets/mvc.png)
+
+
+
 - **Model**: Encapsulates application data and logic.
   - Stores and manipulates data.
   - No reference to the view.
