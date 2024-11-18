@@ -13,21 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-<<<<<<< HEAD
                 "file": "topic-1-basics.md",
-=======
-                "file": "topic-5-other-events.md",
-
->>>>>>> 760aacd6c0a3197e60af410d19cf7b85b1f19b40
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-<<<<<<< HEAD
               "title": "topic-1-basics"
-=======
-              "title": "topic-5-other-events"
->>>>>>> 760aacd6c0a3197e60af410d19cf7b85b1f19b40
             }
           },
           {
@@ -175,17 +166,10 @@
             "state": {
               "type": "outline",
               "state": {
-<<<<<<< HEAD
-                "file": "topic-1-basics.md"
+                "file": "README.md"
               },
               "icon": "lucide-list",
-              "title": "Outline of topic-1-basics"
-=======
-                "file": "topic-5-other-events.md"
-              },
-              "icon": "lucide-list",
-              "title": "Outline of topic-5-other-events"
->>>>>>> 760aacd6c0a3197e60af410d19cf7b85b1f19b40
+              "title": "Outline of README"
             }
           }
         ],
@@ -205,24 +189,16 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "50fc220c3210dee5",
+  "active": "e7cae9f81f59892a",
   "lastOpenFiles": [
-<<<<<<< HEAD
+    "topic-1-basics.md",
     "README.md",
     "material/Lecture 1 - Frames and Layout.pdf",
     "material/Lecture 5 - Graphics.pdf",
     "topic-2-mvc-1.md",
     "todo.md",
-    "topic-1-basics.md",
     "assets/screenshot.png",
     "topic-2-mvc-2.md",
-=======
-
-    "topic-4-mouse-events.md",
-    "todo.md",
-    "material/Lecture 5 - Graphics.pdf",
-    "topic-5-other-events.md",
->>>>>>> 760aacd6c0a3197e60af410d19cf7b85b1f19b40
     "topic-3-graphics.md",
     "assets/what-is-mvc.png",
     "assets/mvc.png",
@@ -230,9 +206,10 @@
     "material/Lecture 7 - Other Events.pdf",
     "vis.md",
     "Untitled.md",
+    "topic-5-other-events.md",
     "VisualMid.txt",
     "material/Lecture 6 - Mouse Events.pdf",
-    "topic-1-basics.md",
+    "topic-4-mouse-events.md",
     "material/Lecture 4 - MVC.pdf",
     "material/Lecture 3 - MVC.pdf",
     "material/Lecture 2 - Label-Button-TextField.pdf",

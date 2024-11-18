@@ -16,7 +16,7 @@ To open this repository in Obsidian, follow these steps:
 
 ---
 ## Topics
-> [!CAUTION]
+> [!WARNING]
 > This Cheat sheet won't have everything explained, use it if you want, but know that I've made it only as a cheat sheet for me to study the Material without looking at the slides, and most of the content here may be llm-generated.
 
 - [Basics](topic-1-basics.md)
