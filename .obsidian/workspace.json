@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "topic-3-graphics.md",
+                "file": "topic-5-other-events.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "topic-3-graphics"
+              "title": "topic-5-other-events"
             }
           },
           {
@@ -47,8 +47,7 @@
               "title": "todo"
             }
           }
-        ],
-        "currentTab": 2
+        ]
       }
     ],
     "direction": "vertical"
@@ -166,10 +165,10 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "todo.md"
+                "file": "topic-5-other-events.md"
               },
               "icon": "lucide-list",
-              "title": "Outline of todo"
+              "title": "Outline of topic-5-other-events"
             }
           }
         ],
@@ -189,11 +188,13 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "12ae9e6006d3dca5",
+  "active": "e7cae9f81f59892a",
   "lastOpenFiles": [
-    "topic-3-graphics.md",
-    "material/Lecture 5 - Graphics.pdf",
+    "topic-4-mouse-events.md",
     "todo.md",
+    "material/Lecture 5 - Graphics.pdf",
+    "topic-5-other-events.md",
+    "topic-3-graphics.md",
     "assets/what-is-mvc.png",
     "assets/mvc.png",
     "topic-2-mvc-1.md",
@@ -202,10 +203,8 @@
     "material/Lecture 7 - Other Events.pdf",
     "vis.md",
     "Untitled.md",
-    "topic-5-other-events.md",
     "VisualMid.txt",
     "material/Lecture 6 - Mouse Events.pdf",
-    "topic-4-mouse-events.md",
     "topic-1-basics.md",
     "material/Lecture 4 - MVC.pdf",
     "material/Lecture 3 - MVC.pdf",
