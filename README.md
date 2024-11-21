@@ -25,6 +25,7 @@ To open this repository in Obsidian, follow these steps:
 - [Graphics](topic-3-graphics.md)
 - [Mouse Events](topic-4-mouse-events.md)
 - [Other Events](topic-5-other-events.md)
+- [Example code: Snake Game](SnakeGame.java)
 
 Feel free to explore each topic for detailed information on Java Swing!
 
