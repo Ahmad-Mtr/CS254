@@ -149,7 +149,6 @@ public class JLabelExample {
 - **Visual Impact**: Proper use of colors and `setOpaque()` enhances the readability and visual design of `JLabel` components.
 
 ---
-
 ## JTextField and JPasswordField
 - **Constructor**:
   ```java

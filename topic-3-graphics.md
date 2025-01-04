@@ -8,6 +8,7 @@
   - Override `paintComponent(Graphics g)` for custom rendering.
   - Always call `super.paintComponent(g)` at the start to retain background painting.
 
+
 ---
 
 ## Drawing Basics
@@ -118,6 +119,7 @@ public class AdvancedGraphicsPanel extends JPanel {
 
         // Anti-aliasing
         g2.setRenderingHint(RenderingHints.KEY_ANTIALIASING, RenderingHints.VALUE_ANTIALIAS_ON);
+        
         g2.setColor(Color.RED);
         g2.drawString("Smooth Text", 100, 150);
     }
