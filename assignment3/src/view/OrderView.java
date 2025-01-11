@@ -223,6 +223,10 @@ TitledBorder titledToppingsBorder = BorderFactory.createTitledBorder(BorderFacto
         UIManager.put("CheckBox.background", theme.getMantle());
         UIManager.put("RadioButton.background", theme.getMantle());
 
+        UIManager.put("OptionPane.foreground", theme.getText());
+        UIManager.put("OptionPane.messageForeground", theme.getText());
+        UIManager.put("OptionPane.background", theme.getBase());
+
         // Others
         UIManager.put("Button.border", BorderFactory.createLineBorder(theme.getSky()));
         UIManager.put("TextField.border", BorderFactory.createLineBorder(theme.getSurface0()));

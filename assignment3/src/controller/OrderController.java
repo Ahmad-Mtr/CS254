@@ -5,14 +5,21 @@ import model.Pizza;
 import view.OrderView;
 
 import javax.swing.*;
+
+
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.SQLException;
 import java.util.ArrayList;
 
 public class OrderController {
     private Order order;
     private OrderView view;
+    private Connection conn;
 
     public OrderController(Order order, OrderView view) {
         this.order = order;
@@ -20,6 +27,15 @@ public class OrderController {
         view.addPizzaButton.addActionListener(new AddPizzaListener());
         view.calculateTotalButton.addActionListener(new CalculateTotalListener());
         view.restartOrderButton.addActionListener(new RestartOrderListener());
+        try {
+            conn = DriverManager.getConnection(
+                    // Used port 3307 since I've mapped docker's one 3306 to 3307
+                    "jdbc:mysql://localhost:3307/pleaseGiveThisCourseInFlutterOrTauriOrPythonAsThoseAreTheFuture",
+                    "root",
+                    "password123");
+        } catch (SQLException e) {
+            System.out.println("Database connection failed");
+        } 
     }
 
     class AddPizzaListener implements ActionListener {
@@ -31,10 +47,8 @@ public class OrderController {
             String crust = getSelectedCrust();
             ArrayList<String> toppings = getSelectedToppings();
 
-
             Pizza pizza = new Pizza(size, crust, toppings);
             order.addPizza(pizza);
-
 
             view.orderDetailsArea.append("Pizza #" + order.getPizzas().size() + ": " + pizza.toString() + "\n");
         }
@@ -73,20 +87,75 @@ public class OrderController {
         @Override
         public void actionPerformed(ActionEvent e) {
 
-                ArrayList<Pizza> pizzas = order.getPizzas();
-                if (pizzas.isEmpty()){
-                    view.orderDetailsArea.append("No Pizza has been added\n");
-                    return;
-                }
-                String pizzaString = "";
-                for (Pizza pizza :
-                        pizzas) {
-                    pizzaString += pizza.toString() + "\n";
-                }
-                view.orderDetailsArea.append("Order by: " + view.customerNameField.getText() + "\n"
-                        + "Total Price: " + order.calculateTotalCost() + "\n" + pizzaString);
+            ArrayList<Pizza> pizzas = order.getPizzas();
+            if (pizzas.isEmpty()) {
+                view.orderDetailsArea.append("No Pizza has been added\n");
+                return;
+            }
+            String pizzaString = "";
+            for (Pizza pizza : pizzas) {
+                pizzaString += pizza.toString() + "\n";
+            }
+            
+            double totalCost = order.calculateTotalCost();
+            // Save the order to the database
+            try {
+                conn.setAutoCommit(false);
 
-                view.totalAmountField.setText(""+order.getCost());
+                // Insert the order
+                String insertOrderSQL = "INSERT INTO orders (customer_name, total) VALUES (?, ?)";
+                PreparedStatement orderStmt = conn.prepareStatement(insertOrderSQL, PreparedStatement.RETURN_GENERATED_KEYS);
+                orderStmt.setString(1, view.customerNameField.getText());
+                orderStmt.setDouble(2, order.getCost());
+                orderStmt.executeUpdate();
+
+                System.out.println("Order saved to database.");
+
+                // Get the generated order_id
+                int orderId;
+                try (var rs = orderStmt.getGeneratedKeys()) {
+                    if (rs.next()) {
+                        orderId = rs.getInt(1);
+                    } else {
+                        throw new SQLException("Failed to retrieve order ID.");
+                    }
+                }
+
+                // Insert order details
+                String insertOrderDetailSQL = "INSERT INTO order_details (order_id, toppings, crust, size, cost) VALUES (?, ?, ?, ?, ?)";
+                PreparedStatement detailStmt = conn.prepareStatement(insertOrderDetailSQL);
+                for (Pizza pizza : pizzas) {
+                    detailStmt.setInt(1, orderId);
+                    detailStmt.setString(2, String.join(", ", pizza.getToppings()));
+                    detailStmt.setString(3, pizza.getCrust());
+                    detailStmt.setString(4, pizza.getSize());
+                    detailStmt.setDouble(5, pizza.calculateCost());
+                    detailStmt.addBatch();
+                }
+                detailStmt.executeBatch();
+
+                conn.commit();
+
+            } catch (SQLException ex) {
+                try {
+                    conn.rollback();
+                } catch (SQLException rollbackEx) {
+                    rollbackEx.printStackTrace();
+                }
+                ex.printStackTrace();
+                view.orderDetailsArea.append("Failed to save order to database.\n");
+                return;
+            } finally {
+                try {
+                    conn.setAutoCommit(true);
+                } catch (SQLException autoCommitEx) {
+                    autoCommitEx.printStackTrace();
+                }
+            }
+            view.orderDetailsArea.append("Order by: " + view.customerNameField.getText() + "\n"
+                    + "Total Price: " + totalCost + "\n" + pizzaString);
+
+            view.totalAmountField.setText("" + totalCost);
 
         }
     }
@@ -99,7 +168,6 @@ public class OrderController {
             view.orderDetailsArea.setText("");
             view.totalAmountField.setText("");
             view.customerNameField.setText("");
-
 
             ((JRadioButton) view.sizePanel.getComponents()[1]).setSelected(true);
             ((JRadioButton) view.crustPanel.getComponents()[1]).setSelected(true);

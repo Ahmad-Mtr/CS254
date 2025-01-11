@@ -43,4 +43,16 @@ public class Pizza {
                 ", toppings: [" + toppings +
                 ']';
     }
+
+    public String getSize() {
+        return size;
+    }
+
+    public String getCrust() {
+        return crust;
+    }
+
+    public ArrayList<String> getToppings() {
+        return toppings;
+    }
 }

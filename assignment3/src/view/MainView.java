@@ -2,7 +2,6 @@ package view;
 
 import javax.swing.*;
 import javax.swing.border.Border;
-import javax.swing.border.LineBorder;
 
 import controller.OrderController;
 import model.Order;
@@ -12,7 +11,7 @@ import java.awt.*;
 
 public class MainView extends JFrame {
     private final ctp clrs;
-    private OrderController controller;
+    private OrderController newOrderController;
 
     public MainView() {
         clrs = new ctp();
@@ -45,6 +44,7 @@ public class MainView extends JFrame {
 
     private void openOrderView() {
         OrderView orderView = new OrderView();
+        newOrderController = new OrderController(new Order(), orderView);
         orderView.setLocationRelativeTo(orderView.getParent());
         orderView.setVisible(true);
     }
@@ -66,6 +66,10 @@ public class MainView extends JFrame {
         UIManager.put("Menu.background", theme.getCrust());
         UIManager.put("Menu.selectionBackground", theme.getSky());
         UIManager.put("Menu.foreground", theme.getText());
+
+        UIManager.put("OptionPane.foreground", theme.getText());
+        UIManager.put("OptionPane.messageForeground", theme.getText());
+        UIManager.put("OptionPane.background", theme.getBase());
 
         // MenuItem styling
         UIManager.put("MenuItem.background", theme.getCrust());

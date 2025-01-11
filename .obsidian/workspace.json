@@ -25,14 +25,12 @@
             "id": "197528402dc7642f",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "pdf",
               "state": {
-                "file": "topic-4-databases-1.md",
-                "mode": "source",
-                "source": false
+                "file": "material/Lecture 11 - Database - part 1.pdf"
               },
-              "icon": "lucide-file",
-              "title": "topic-4-databases-1"
+              "icon": "lucide-file-text",
+              "title": "Lecture 11 - Database - part 1"
             }
           },
           {
@@ -49,8 +47,7 @@
               "title": "DatabasesExamples"
             }
           }
-        ],
-        "currentTab": 2
+        ]
       }
     ],
     "direction": "vertical"
@@ -168,10 +165,10 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "lecture-code/databases/example1/DatabasesExamples.md"
+                "file": "topic-4-databases-1.md"
               },
               "icon": "lucide-list",
-              "title": "Outline of DatabasesExamples"
+              "title": "Outline of topic-4-databases-1"
             }
           }
         ],
@@ -191,23 +188,23 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "1f95a9dd36cd4040",
+  "active": "920f38fb0022ac7d",
   "lastOpenFiles": [
-    "assignment3/src/Main.java",
-    "assignment3/Main.java",
-    "assignment3/src/controller/OrderController.java",
-    "assignment3/src/controller",
-    "assignment3/src/model/Pizza.java",
-    "assignment3/src/model/Order.java",
-    "assignment3/src/model",
-    "assignment3/src/view/OrderDashboard.java",
-    "assignment3/src/view/OrderView.java",
-    "assignment3/src/view/MainView.java",
-    "assignment3/src/view",
+    "material/Lecture 11 - Database - part 1.pdf",
+    "topic-4-databases-1.md",
+    "lecture-code/databases/example1/DatabasesExamples.md",
+    "lecture-code/databases/example1/src/config.properties",
+    "lecture-code/databases/example1/src/ResultSetTableModel.java",
+    "lecture-code/databases/example1/src/JTABLECRUDExample.java",
+    "lecture-code/databases/example1/src/DisplayQueryResults.java",
+    "lecture-code/databases/example1/src/DisplayAuthors.java",
+    "lecture-code/databases/example1/src/DatabaseExamples.java",
+    "lecture-code/databases/example1/src/AuthorsTable.java",
+    "lecture-code/databases/example1/lib/mysql-connector-j-9.1.0.jar",
+    "lecture-code/databases/example1/src",
+    "lecture-code/databases/example1/lib",
     "lecture-code/databases/example1/AuthorsTable.md",
     "lecture-code/databases/example1/DisplayAuthors.md",
-    "lecture-code/databases/example1/DatabasesExamples.md",
-    "topic-4-databases-1.md",
     "topic-4-databases-2.md",
     "lecture-code/databases/example2/sql.md",
     "lecture-code/databases/example2/Registeration/WindowController.md",

@@ -1,7 +1,0 @@
-- [x] Exit buttons on all frames
-- [x] New frames location on Center, relativeTo()
-- [x] stylize MainView
-- [ ] SQLify it
-- [ ] Refactor everything after finishing
-- [ ] stylize JOptionPane
-- [ ] *pleaseGiveThisCourseInFlutterOrTauriOrPythonAsThoseAreTheFuture*

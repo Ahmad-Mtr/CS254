@@ -5,12 +5,13 @@ import java.util.ArrayList;
 public class Order {
     private double cost;
 
+    
+    private ArrayList<Pizza> pizzas;
+    
+    
     public double getCost() {
         return cost;
     }
-
-    private ArrayList<Pizza> pizzas;
-
     public ArrayList<Pizza> getPizzas() {
         return pizzas;
     }

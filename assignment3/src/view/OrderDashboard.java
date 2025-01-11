@@ -1,11 +1,9 @@
 package view;
 
-import utils.CircleIcon;
 import utils.ctp;
 
 import javax.swing.*;
 import javax.swing.border.LineBorder;
-import javax.swing.border.TitledBorder;
 import javax.swing.table.DefaultTableModel;
 
 import java.awt.*;
@@ -13,9 +11,7 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
-import java.sql.ResultSetMetaData;
 import java.sql.SQLException;
-import java.util.Vector;
 
 public class OrderDashboard extends JFrame {
     private final ctp clrs;
@@ -55,6 +51,10 @@ public class OrderDashboard extends JFrame {
         // Buttons init
         searchButton = new JButton("Search");
         backToMenuButton = new JButton("Back to Menu");
+        backToMenuButton.addActionListener(e -> {
+            this.setVisible(false);
+        });
+        
         stylizeButton(searchButton);
         stylizeButton(backToMenuButton);
         searchPanel.add(searchButton);
@@ -65,14 +65,17 @@ public class OrderDashboard extends JFrame {
 
         // Table
         // Column names
-        String[] columnNames = { "Order ID", "Customer Name", "Date", "Total", "Status" };
+        String[] columnNames = { "Order ID", "Customer Name", "Total Cost", "Date", "Pizza Details" };
         DefaultTableModel tableModel = new DefaultTableModel(columnNames, 0);
         JTable orderTable = new JTable(tableModel);
         JScrollPane scrollPane = new JScrollPane(orderTable);
+        scrollPane.setBackground(clrs.getCrust());
+        scrollPane.getViewport().setBackground(clrs.getCrust());
+        scrollPane.setBorder(BorderFactory.createLineBorder(clrs.getSurface0()));
 
         try {
             connection = DriverManager.getConnection(
-                // Used port 3307 since I've mapped docker's one 3306 to 3307 
+                    // Used port 3307 since I've mapped docker's one 3306 to 3307
                     "jdbc:mysql://localhost:3307/pleaseGiveThisCourseInFlutterOrTauriOrPythonAsThoseAreTheFuture",
                     "root",
                     "password123");
@@ -90,27 +93,46 @@ public class OrderDashboard extends JFrame {
             System.out.println("Searching for: " + customerName);
             // Clear existing rows
             tableModel.setRowCount(0);
-
             try {
-                // Prepare and execute search query
-                PreparedStatement pstmt = connection.prepareStatement(
-                        "SELECT * FROM orders WHERE customer_name LIKE ?");
+                String query = """
+                             select * from orders where customer_name like ?;
+                        """;
+                PreparedStatement pstmt = connection.prepareStatement(query);
+
                 pstmt.setString(1, "%" + customerName + "%");
 
                 ResultSet rs = pstmt.executeQuery();
 
                 // Populate table with search results
                 while (rs.next()) {
+
+                    int orderId = rs.getInt("order_id");
+                    String query1 = """
+                            select size, crust, toppings from order_details where order_id like ? ;
+                            """;
+                    PreparedStatement pstmt1 = connection.prepareStatement(query1);
+                    pstmt1.setString(1, "%" + orderId + "%");
+                    ResultSet rs1 = pstmt1.executeQuery();
+                    String pizzaDetails = "";
+                    while (rs1.next()) {
+                        String detail = String.format("size: %s, toppings: %s, crust: %s",
+                                rs1.getString("size"),
+                                rs1.getString("toppings"),
+                                rs1.getString("crust"));
+                        pizzaDetails += detail + " | \n";
+                    }
+
                     tableModel.addRow(new Object[] {
-                            rs.getInt("order_id"),
+                            orderId,
                             rs.getString("customer_name"),
+                            rs.getDouble("total"),
                             rs.getDate("order_date"),
-                            rs.getDouble("total_amount"),
-                            rs.getString("status")
+                            pizzaDetails
                     });
                 }
             } catch (SQLException ex) {
                 JOptionPane.showMessageDialog(this, "Search failed: " + ex.getMessage());
+
             }
         });
     }
@@ -133,7 +155,6 @@ public class OrderDashboard extends JFrame {
                 button.setBackground(clrs.getCrust());
                 button.setForeground(clrs.getText());
             }
-
         });
     }
 
@@ -142,6 +163,10 @@ public class OrderDashboard extends JFrame {
         UIManager.put("Label.foreground", theme.getText());
         UIManager.put("Button.foreground", theme.getText());
         UIManager.put("TextField.foreground", theme.getText());
+        
+        UIManager.put("OptionPane.foreground", theme.getText());
+        UIManager.put("OptionPane.messageForeground", theme.getText());
+        UIManager.put("OptionPane.background", theme.getBase());
 
         // bckgrnd
         UIManager.put("Frame.background", theme.getBase());
@@ -160,47 +185,27 @@ public class OrderDashboard extends JFrame {
         UIManager.put("Button.border", new LineBorder(clrs.getSky(), 2));
         UIManager.put("Button.preferredSize", new Dimension(200, 50));
         // Header Styling
-
         UIManager.put("TableHeader.background", theme.getBase());
-
         UIManager.put("TableHeader.foreground", theme.getText());
-
         UIManager.put("TableHeader.font", new Font("Arial", Font.BOLD, 14));
-
         UIManager.put("TableHeader.cellBorder",
-
                 BorderFactory.createCompoundBorder(
-
                         BorderFactory.createLineBorder(theme.getSurface()),
-
-                        BorderFactory.createEmptyBorder(5, 5, 5, 5)
-
-                )
-
-        );
+                        BorderFactory.createEmptyBorder(5, 5, 5, 5)));
 
         // Table Body Styling
-
         UIManager.put("Table.background", theme.getCrust());
-
         UIManager.put("Table.foreground", theme.getText());
-
         UIManager.put("Table.selectionBackground", theme.getSurface());
-
         UIManager.put("Table.selectionForeground", theme.getText());
 
         // Grid and Border
-
         UIManager.put("Table.gridColor", theme.getSurface0());
-
         UIManager.put("Table.showVerticalLines", true);
-
         UIManager.put("Table.showHorizontalLines", true);
 
         // Dimensions and Font
-
         UIManager.put("Table.rowHeight", 25);
-
         UIManager.put("Table.font", new Font("Helvetica", Font.PLAIN, 18));
     }
 
