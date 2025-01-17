@@ -1,50 +1,50 @@
 {
   "main": {
-    "id": "7916a1230dbc7faf",
+    "id": "2674b8de378b82af",
     "type": "split",
     "children": [
       {
-        "id": "18450059637d44ff",
+        "id": "e20e93d88a52e440",
         "type": "tabs",
         "children": [
           {
-            "id": "e7cae9f81f59892a",
+            "id": "920f38fb0022ac7d",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "topic-2-mvc-1.md",
-                "mode": "preview",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "topic-2-mvc-1"
-            }
-          },
-          {
-            "id": "af8f62efa0ae61a9",
-            "type": "leaf",
-            "state": {
-              "type": "pdf",
-              "state": {
-                "file": "material/Lecture 3 - MVC.pdf"
-              },
-              "icon": "lucide-file-text",
-              "title": "Lecture 3 - MVC"
-            }
-          },
-          {
-            "id": "12ae9e6006d3dca5",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "todo.md",
+                "file": "topic-4-databases-1.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "todo"
+              "title": "topic-4-databases-1"
+            }
+          },
+          {
+            "id": "197528402dc7642f",
+            "type": "leaf",
+            "state": {
+              "type": "pdf",
+              "state": {
+                "file": "material/Lecture 11 - Database - part 1.pdf"
+              },
+              "icon": "lucide-file-text",
+              "title": "Lecture 11 - Database - part 1"
+            }
+          },
+          {
+            "id": "1f95a9dd36cd4040",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "lecture-code/databases/example1/DatabasesExamples.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "DatabasesExamples"
             }
           }
         ]
@@ -53,15 +53,15 @@
     "direction": "vertical"
   },
   "left": {
-    "id": "bf9e43955fcaddc9",
+    "id": "7fdd3778a43d9384",
     "type": "split",
     "children": [
       {
-        "id": "3412861dc08b24b8",
+        "id": "4153545e87c3e14a",
         "type": "tabs",
         "children": [
           {
-            "id": "fdb6164078a8029c",
+            "id": "bc947fe45fc8deeb",
             "type": "leaf",
             "state": {
               "type": "file-explorer",
@@ -73,7 +73,7 @@
             }
           },
           {
-            "id": "2b55d808d4eaf49b",
+            "id": "4dcbae763aac3be2",
             "type": "leaf",
             "state": {
               "type": "search",
@@ -90,7 +90,7 @@
             }
           },
           {
-            "id": "a862c552ea71dc40",
+            "id": "b70717b17e4f07da",
             "type": "leaf",
             "state": {
               "type": "bookmarks",
@@ -103,24 +103,24 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 265
   },
   "right": {
-    "id": "dc779eb176f9962a",
+    "id": "e226b7992e357e09",
     "type": "split",
     "children": [
       {
-        "id": "f4498600b7db5bf7",
+        "id": "3c0671c51271df65",
         "type": "tabs",
         "children": [
           {
-            "id": "eb3bc18078682c6f",
+            "id": "9badf56b6cbf7074",
             "type": "leaf",
             "state": {
               "type": "backlink",
               "state": {
-                "file": "README.md",
-                "collapseAll": true,
+                "file": "lecture-code/databases/example1/DatabasesExamples.md",
+                "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
                 "showSearch": false,
@@ -129,25 +129,25 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks for README"
+              "title": "Backlinks for DatabasesExamples"
             }
           },
           {
-            "id": "7bffe297ff135645",
+            "id": "5580b7073ec09546",
             "type": "leaf",
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "README.md",
+                "file": "lecture-code/databases/example1/DatabasesExamples.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "Outgoing links from README"
+              "title": "Outgoing links from DatabasesExamples"
             }
           },
           {
-            "id": "096b3a07b7887207",
+            "id": "59d7166b06dc3060",
             "type": "leaf",
             "state": {
               "type": "tag",
@@ -160,15 +160,15 @@
             }
           },
           {
-            "id": "4595a8467c412d4a",
+            "id": "d81af85cd79aef53",
             "type": "leaf",
             "state": {
               "type": "outline",
               "state": {
-                "file": "topic-2-mvc-1.md"
+                "file": "topic-4-databases-1.md"
               },
               "icon": "lucide-list",
-              "title": "Outline of topic-2-mvc-1"
+              "title": "Outline of topic-4-databases-1"
             }
           }
         ],
@@ -176,7 +176,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 253
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -188,32 +188,43 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "e7cae9f81f59892a",
+  "active": "920f38fb0022ac7d",
   "lastOpenFiles": [
-    "todo.md",
-    "material/Lecture 3 - MVC.pdf",
-    "topic-2-mvc-1.md",
-    "material/Lecture 2 - Label-Button-TextField.pdf",
-    "Untitled.md",
-    "topic-1-basics.md",
-    "material/Lecture 1 - Frames and Layout.pdf",
-    "topic-4-mouse-events.md",
-    "topic-3-graphics.md",
-    "README.md",
-    "topic-5-other-events.md",
-    "topic-2-mvc-2.md",
-    "material/Lecture 8 - Other Events and components.pdf",
-    "material/Lecture 7 - Other Events.pdf",
-    "material/Lecture 6 - Mouse Events.pdf",
-    "material/Lecture 5 - Graphics.pdf",
-    "material/Lecture 4 - MVC.pdf",
-    "material",
-    "CS254.rar",
-    "assets/ass1-custom-sol.jpg",
-    "assignment1/README.md",
-    "assets/panels-structure.png",
-    "assets/mvc.png",
-    "assets/what-is-mvc.png",
-    "Welcome.md"
+    "material/Lecture 11 - Database - part 1.pdf",
+    "topic-4-databases-1.md",
+    "lecture-code/databases/example1/DatabasesExamples.md",
+    "lecture-code/databases/example1/src/config.properties",
+    "lecture-code/databases/example1/src/ResultSetTableModel.java",
+    "lecture-code/databases/example1/src/JTABLECRUDExample.java",
+    "lecture-code/databases/example1/src/DisplayQueryResults.java",
+    "lecture-code/databases/example1/src/DisplayAuthors.java",
+    "lecture-code/databases/example1/src/DatabaseExamples.java",
+    "lecture-code/databases/example1/src/AuthorsTable.java",
+    "lecture-code/databases/example1/lib/mysql-connector-j-9.1.0.jar",
+    "lecture-code/databases/example1/src",
+    "lecture-code/databases/example1/lib",
+    "lecture-code/databases/example1/AuthorsTable.md",
+    "lecture-code/databases/example1/DisplayAuthors.md",
+    "topic-4-databases-2.md",
+    "lecture-code/databases/example2/sql.md",
+    "lecture-code/databases/example2/Registeration/WindowController.md",
+    "lecture-code/databases/example2/Registeration/MainFrame.md",
+    "lecture-code/databases/example2/Registeration/Controller.md",
+    "lecture-code/databases/example2/Registeration/CheckBoxHandler.md",
+    "lecture-code/databases/example2/Registeration/Database.md",
+    "lecture-code/databases/example2/Registeration/FocusHandler.md",
+    "lecture-code/databases/example2/Registeration/LoginPanel.md",
+    "lecture-code/databases/example2/Registeration/Registeration2.md",
+    "lecture-code/databases/example2/Registeration/RegisterationPanel.md",
+    "lecture-code/databases/example2/Registeration/TextChangeHandler.md",
+    "lecture-code/databases/example2/Registeration/User.md",
+    "lecture-code/databases/example2/products/View.md",
+    "lecture-code/databases/example2/products/ProductModel.md",
+    "lecture-code/databases/example2/products/Main.md",
+    "lecture-code/databases/example2/products/Database.md",
+    "lecture-code/databases/example2/products/Controller.md",
+    "lecture-code/databases/example1/ResultSetTableModel.md",
+    "lecture-code/databases/example1/DisplayQueryResults.md",
+    "lecture-code/databases/example1/JTABLECRUDExample.md"
   ]
 }

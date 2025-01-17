@@ -1,4 +1,0 @@
-- [ ] **Layouts** more syntax
-- [ ] `JButtons` & `JTextField` examples
-- [ ] `JOptionPane` syntax
-- [ ] Include diagrams for *MVC*
