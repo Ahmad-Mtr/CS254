@@ -8,20 +8,6 @@
         "type": "tabs",
         "children": [
           {
-            "id": "920f38fb0022ac7d",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "topic-4-databases-1.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "topic-4-databases-1"
-            }
-          },
-          {
             "id": "197528402dc7642f",
             "type": "leaf",
             "state": {
@@ -37,17 +23,16 @@
             "id": "1f95a9dd36cd4040",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "pdf",
               "state": {
-                "file": "lecture-code/databases/example1/DatabasesExamples.md",
-                "mode": "source",
-                "source": false
+                "file": "material/Lecture 5 - Graphics.pdf"
               },
-              "icon": "lucide-file",
-              "title": "DatabasesExamples"
+              "icon": "lucide-file-text",
+              "title": "Lecture 5 - Graphics"
             }
           }
-        ]
+        ],
+        "stacked": true
       }
     ],
     "direction": "vertical"
@@ -103,7 +88,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 265
+    "width": 265,
+    "collapsed": true
   },
   "right": {
     "id": "e226b7992e357e09",
@@ -165,10 +151,10 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "topic-4-databases-1.md"
+                "file": "material/Lecture 11 - Database - part 1.pdf"
               },
               "icon": "lucide-list",
-              "title": "Outline of topic-4-databases-1"
+              "title": "Outline of Lecture 11 - Database - part 1"
             }
           }
         ],
@@ -176,7 +162,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 253
+    "width": 253,
+    "collapsed": true
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -185,14 +172,18 @@
       "canvas:Create new canvas": false,
       "daily-notes:Open today's daily note": false,
       "templates:Insert template": false,
-      "command-palette:Open command palette": false
+      "command-palette:Open command palette": false,
+      "obsidian-excalidraw-plugin:Create new drawing": false
     }
   },
-  "active": "920f38fb0022ac7d",
+  "active": "197528402dc7642f",
   "lastOpenFiles": [
+    "material/Lecture 5 - Graphics.pdf",
+    "material/ThreadsAndSwing.pdf",
+    "lecture-code/databases/example1/DatabasesExamples.md",
     "material/Lecture 11 - Database - part 1.pdf",
     "topic-4-databases-1.md",
-    "lecture-code/databases/example1/DatabasesExamples.md",
+    "assignment3/assignment3.zip",
     "lecture-code/databases/example1/src/config.properties",
     "lecture-code/databases/example1/src/ResultSetTableModel.java",
     "lecture-code/databases/example1/src/JTABLECRUDExample.java",
@@ -200,9 +191,6 @@
     "lecture-code/databases/example1/src/DisplayAuthors.java",
     "lecture-code/databases/example1/src/DatabaseExamples.java",
     "lecture-code/databases/example1/src/AuthorsTable.java",
-    "lecture-code/databases/example1/lib/mysql-connector-j-9.1.0.jar",
-    "lecture-code/databases/example1/src",
-    "lecture-code/databases/example1/lib",
     "lecture-code/databases/example1/AuthorsTable.md",
     "lecture-code/databases/example1/DisplayAuthors.md",
     "topic-4-databases-2.md",
