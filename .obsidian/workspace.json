@@ -4,31 +4,21 @@
     "type": "split",
     "children": [
       {
-        "id": "e20e93d88a52e440",
+        "id": "bf6e8f3bdf7d0091",
         "type": "tabs",
         "children": [
           {
-            "id": "197528402dc7642f",
+            "id": "e5d0680113c1c4f4",
             "type": "leaf",
             "state": {
-              "type": "pdf",
+              "type": "markdown",
               "state": {
-                "file": "material/Lecture 11 - Database - part 1.pdf"
+                "file": "topic-9-databases-tables.md",
+                "mode": "source",
+                "source": false
               },
-              "icon": "lucide-file-text",
-              "title": "Lecture 11 - Database - part 1"
-            }
-          },
-          {
-            "id": "1f95a9dd36cd4040",
-            "type": "leaf",
-            "state": {
-              "type": "pdf",
-              "state": {
-                "file": "material/Lecture 5 - Graphics.pdf"
-              },
-              "icon": "lucide-file-text",
-              "title": "Lecture 5 - Graphics"
+              "icon": "lucide-file",
+              "title": "topic-9-databases-tables"
             }
           }
         ],
@@ -88,8 +78,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 265,
-    "collapsed": true
+    "width": 265
   },
   "right": {
     "id": "e226b7992e357e09",
@@ -151,10 +140,10 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "material/Lecture 11 - Database - part 1.pdf"
+                "file": "topic-9-databases-tables.md"
               },
               "icon": "lucide-list",
-              "title": "Outline of Lecture 11 - Database - part 1"
+              "title": "Outline of topic-9-databases-tables"
             }
           }
         ],
@@ -176,24 +165,32 @@
       "obsidian-excalidraw-plugin:Create new drawing": false
     }
   },
-  "active": "197528402dc7642f",
+  "active": "e5d0680113c1c4f4",
   "lastOpenFiles": [
+    "Core Components.md",
+    "topic-9-databases-tables.md",
+    "topic-9-databases-2.md",
+    "topic-9-databases-1.md",
+    "13.md",
+    "topic-8-other-components.md",
+    "topic-6-other-events-components-ch.8.md",
+    "topic-7-dialogs-textcomponents.md",
+    "material/Lecture 9 - Dialogs and TextComponents.pdf",
+    "topic-5-other-events.md",
+    "material/Lecture 8 - Other Events and components.pdf",
+    "material/Lecture 10 - Other Components.pdf",
+    "topic-3-graphics.md",
+    "topic-4-mouse-events.md",
+    "material/Lecture 12 - Database - part 2.pdf",
+    "material/Lecture 11 - Database - part 1.pdf",
     "material/Lecture 5 - Graphics.pdf",
     "material/ThreadsAndSwing.pdf",
     "lecture-code/databases/example1/DatabasesExamples.md",
-    "material/Lecture 11 - Database - part 1.pdf",
-    "topic-4-databases-1.md",
     "assignment3/assignment3.zip",
     "lecture-code/databases/example1/src/config.properties",
     "lecture-code/databases/example1/src/ResultSetTableModel.java",
-    "lecture-code/databases/example1/src/JTABLECRUDExample.java",
-    "lecture-code/databases/example1/src/DisplayQueryResults.java",
-    "lecture-code/databases/example1/src/DisplayAuthors.java",
-    "lecture-code/databases/example1/src/DatabaseExamples.java",
-    "lecture-code/databases/example1/src/AuthorsTable.java",
     "lecture-code/databases/example1/AuthorsTable.md",
     "lecture-code/databases/example1/DisplayAuthors.md",
-    "topic-4-databases-2.md",
     "lecture-code/databases/example2/sql.md",
     "lecture-code/databases/example2/Registeration/WindowController.md",
     "lecture-code/databases/example2/Registeration/MainFrame.md",
@@ -205,14 +202,6 @@
     "lecture-code/databases/example2/Registeration/Registeration2.md",
     "lecture-code/databases/example2/Registeration/RegisterationPanel.md",
     "lecture-code/databases/example2/Registeration/TextChangeHandler.md",
-    "lecture-code/databases/example2/Registeration/User.md",
-    "lecture-code/databases/example2/products/View.md",
-    "lecture-code/databases/example2/products/ProductModel.md",
-    "lecture-code/databases/example2/products/Main.md",
-    "lecture-code/databases/example2/products/Database.md",
-    "lecture-code/databases/example2/products/Controller.md",
-    "lecture-code/databases/example1/ResultSetTableModel.md",
-    "lecture-code/databases/example1/DisplayQueryResults.md",
-    "lecture-code/databases/example1/JTABLECRUDExample.md"
+    "lecture-code/databases/example2/Registeration/User.md"
   ]
 }
